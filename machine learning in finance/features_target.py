@@ -11,7 +11,7 @@ for n in [14, 30, 50, 200]:
     # Create the moving average indicator and divide by Adj_Close
     bitcoin_data['ma' + str(n)] = talib.SMA(bitcoin_data['Adj_Close'].values,
                               timeperiod=n) / bitcoin_data['Adj_Close']
-    # Create the RSI indicator
+    # Create the RSI indicator+
     bitcoin_data['rsi' + str(n)] = talib.RSI(bitcoin_data['Adj_Close'].values, timeperiod=n)
     
     # Add rsi and moving average to the feature name list
